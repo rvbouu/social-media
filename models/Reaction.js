@@ -1,6 +1,9 @@
+// imports
 const { Schema, Types} = require('mongoose');
+// npm library for date formatting
 const moment = require('moment');
 
+// not a model: reaction field's sub-document schema in the Thought model 
 const reactionSchema = new Schema(
   {
     reactionId:{
@@ -30,4 +33,5 @@ const reactionSchema = new Schema(
   }
 );
 
+// exports
 module.exports = reactionSchema;

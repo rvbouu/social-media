@@ -1,5 +1,7 @@
+// imports
 const router = require('express').Router();
 
+// functions written in thought-controller.js
 const {
   getThoughts,
   getThoughtById,
@@ -26,4 +28,5 @@ router.route('/:thoughtId/reactions').post(addReaction);
 // DELETE route for thought reactions
 router.route('/:thoughtId/reactions/:reactionId').delete(deleteReaction);
 
+// exports
 module.exports = router;

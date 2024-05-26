@@ -1,5 +1,7 @@
+// imports
 const { User, Thought } = require('../models');
 
+// exports
 module.exports = {
   // GET all thoughts
   // /api/thoughts

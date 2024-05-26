@@ -1,5 +1,7 @@
+// imports
 const router = require('express').Router();
 
+// functions written in user-controller.js
 const {
   getUsers,
   getUserById,

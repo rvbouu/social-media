@@ -1,7 +1,10 @@
+// imports
 const {Schema, model} = require('mongoose');
 const reactionSchema = require('./Reaction');
+// npm library for date formatting
 const moment = require('moment');
 
+// thoughtSchema
 const thoughtSchema = new Schema(
   {
     thoughtText: {
@@ -29,10 +32,13 @@ const thoughtSchema = new Schema(
   }
 );
 
+// increase reactionCount when reactions are added to a thought
 thoughtSchema.virtual('reactionCount').get(function() {
   return this.reactions.length;
 });
 
+// create Thought model with thoughtSchema
 const Thought = model('thought', thoughtSchema);
 
+// exports
 module.exports = Thought;
